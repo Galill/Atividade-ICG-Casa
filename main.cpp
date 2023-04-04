@@ -142,11 +142,11 @@ void keyboardFunc(unsigned char key, GLint x, GLint y) {
     int Espaco = { 32 };
     int mod = glutGetModifiers();
 
-    //Muda a cor do fundo para preto se precionar CTRL + Espaço.
+    //Muda a cor do fundo para preto se pressionar CTRL + Espaço.
     if ((mod & GLUT_ACTIVE_CTRL) && (key == Espaco)) {
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     }
-    //Muda a cor do fundo para branco caso outra tecla que não seja especial seja precionada.
+    //Muda a cor do fundo para branco caso outra tecla que não seja especial seja pressionada.
     else {
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     }
@@ -161,7 +161,7 @@ void keyboardfuncSpec(GLint key, GLint x, GLint y) {
     if (mod & GLUT_ACTIVE_CTRL) {
         glutPostRedisplay();
     } else { 
-    //Muda a cor do fundo para cinza caso alguma tecla especial seja precionada.
+    //Muda a cor do fundo para cinza caso alguma tecla especial seja pressionada.
     glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
     }
 
