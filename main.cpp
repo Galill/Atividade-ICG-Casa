@@ -130,7 +130,6 @@ void desenharCasa(GLvoid) {
 //-------------------------------------------------------------------------
 }
 
-
 void desenha(GLvoid) {
     glClear(GL_COLOR_BUFFER_BIT);
     desenharCasa();
@@ -143,11 +142,11 @@ void keyboardFunc(unsigned char key, GLint x, GLint y) {
     int Espaco = { 32 };
     int mod = glutGetModifiers();
 
-    //Muda a cor do fundo para preto se precionar CTRL + EspaÁo.
+    //Muda a cor do fundo para preto se precionar CTRL + Espa√ßo.
     if ((mod & GLUT_ACTIVE_CTRL) && (key == Espaco)) {
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     }
-    //Muda a cor do fundo para branco caso outra tecla que n„o seja especial seja precionada.
+    //Muda a cor do fundo para branco caso outra tecla que n√£o seja especial seja precionada.
     else {
         glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
     }
@@ -158,7 +157,7 @@ void keyboardfuncSpec(GLint key, GLint x, GLint y) {
 
     int mod = glutGetModifiers();
 
-    //Faz com que o CTRL sÛ possa ser usado junto com o espaÁo para mudar a cor do fundo para preto.
+    //Faz com que o CTRL s√≥ possa ser usado junto com o espa√ßo para mudar a cor do fundo para preto.
     if (mod & GLUT_ACTIVE_CTRL) {
         glutPostRedisplay();
     } else { 
